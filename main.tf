@@ -6,4 +6,8 @@ resource "aws_instance" "vm1" {
   tags = {
     Name = var.machine_name
   }
+  for_each = {
+    vm1 = "t3.micro"
+    vm2 = "t3.micro"
+  }
 }
