@@ -4,10 +4,10 @@ resource "aws_instance" "vm1" {
   instance_type = var.instance_type
   key_name      = var.key_name
   tags = {
-    Name = var.machine_name
+    Name = each.value
   }
   for_each = {
-    vm1 = "t3.micro"
-    vm2 = "t3.micro"
+    vm1 = "VM_Arezou"
+    vm2 = "VM_Hamed"
   }
 }
