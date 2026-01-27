@@ -1,7 +1,8 @@
-variable "ami_id" {
-  type        = string
-  description = "this is ami_id for the machine"
+variable "Staging_Instnace" {
+  description = "VM definitions"
+  type = map(object({
+    Ami           = string
+    instance_type = string
+    key           = string
+  }))
 }
-variable "instance_type" {}
-variable "key_name" {}
-variable "machine_name" {}

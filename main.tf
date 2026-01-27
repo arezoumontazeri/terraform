@@ -1,13 +1,9 @@
-
-resource "aws_instance" "vm1" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  key_name      = var.key_name
+resource "aws_instance" "stage" {
+  for_each      = var.Staging_Instnace
+  ami           = each.value.Ami
+  instance_type = each.value.instance_type
+  key_name      = each.value.key
   tags = {
-    Name = each.value
-  }
-  for_each = {
-    vm1 = "VM_Arezou"
-    vm2 = "VM_Hamed"
+    Name = each.key
   }
 }
