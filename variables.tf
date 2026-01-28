@@ -6,3 +6,10 @@ variable "Staging_Instnace" {
     key           = string
   }))
 }
+variable "product_instance" {
+  description = "list of VMs name"
+  type        = list(string)
+}
+variable "ami" {}
+variable "key_name" {}
+variable "instance_type" {}
