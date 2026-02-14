@@ -37,4 +37,4 @@ product_instance = {
     key           = "key2"
   }
 }
- infra_type = "prod"
+iteriiihhdfg infra_type = "prod"
