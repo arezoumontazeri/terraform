@@ -13,3 +13,23 @@ variable "public_subnet_cidr" {
 variable "private_subnet_cidr" {
   default = "10.0.2.0/24"
 }
+variable "subnets" {
+  type = map(object({
+    cidr_block              = string
+    map_public_ip_on_launch = bool
+  }))
+
+}
+
+variable "route_tables" {
+  type = map(object({
+    is_public = bool
+  }))
+}
+
+
+
+
+
+
+
